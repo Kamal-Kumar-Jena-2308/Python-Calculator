@@ -13,6 +13,8 @@ def multiply(num1, num2):
 #divide two numbers 
 def divide(num1, num2): 
 	return num1 / num2 
+def modulo(num1,num2):
+	return num1%2
 if __name__ == "__main__":
     while True:
         print("Please select operation -\n"
@@ -20,12 +22,13 @@ if __name__ == "__main__":
                 "2. Subtract\n" 
                 "3. Multiply\n"
                 "4. Multiply\n"
-                "5. Quit\n") 
+	            "5. Modulo\n"
+                "6. Quit\n") 
 
 
         # Taking input from the user 
-        select = input("Select operations form 1, 2, 3, 4, 5 :") 
-        if select == '5': 
+        select = input("Select operations form 1, 2, 3, 4, 5 ,6 :") 
+        if select == '6': 
             print("\n************ Thanks for using the calculator **************\n")
             exit() 
 
@@ -46,8 +49,10 @@ if __name__ == "__main__":
 
         elif select == '4': 
             print(number_1, "/", number_2, "=", 
-                            divide(number_1, number_2))  
-        
+                            divide(number_1, number_2))
+        elif select == '5':
+            print(number_1, "%", number_2, "=", 
+                            modulo(number_1, number_2)) 
         else: 
             print("Syntax Error!")  
         print("\n************ Thanks for using the calculator **************\n")
